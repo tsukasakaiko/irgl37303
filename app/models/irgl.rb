@@ -1,0 +1,2 @@
+class Irgl < ApplicationRecord
+end
