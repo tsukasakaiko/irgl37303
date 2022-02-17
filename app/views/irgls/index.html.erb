@@ -1,9 +1,9 @@
 <div class="contents row">
-  <% @tweets.each do |irgl| %>
+  <% @irgls.each do |irgl| %>
     <div class="content_post" style="background-image: url(<%= irgl.image %>);">
       <p><%= irgl.text %></p>
       <span class="name">
-        <%= tweet.name %>
+        <%= irgl.name %>
       </span>
     </div>
   <% end %>
