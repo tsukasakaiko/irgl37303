@@ -3,7 +3,7 @@ class IrglsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @irgls = Irgl.all
+    @irgls = Irgl.includes(:user)
   end
   
   def new
@@ -35,7 +35,7 @@ class IrglsController < ApplicationController
 
   private
   def irgl_params
-    params.require(:irgl).permit(:name, :image, :text).merge(user_id: current_user.id)
+    params.require(:irgl).permit(:image, :text).merge(user_id: current_user.id)
   end
 
   def set_irgl
