@@ -1,7 +1,9 @@
 class IrglsController < ApplicationController
-  before_action :set_tweet, only: [:edit, :show]
+  before_action :set_irgl, only: [:edit, :show]
+  before_action :move_to_index, except: [:index, :show]
+
   def index
-    @irgls = Irgl.all
+    @irgls = Irgl.includes(:user)
   end
   
   def new
@@ -33,13 +35,18 @@ class IrglsController < ApplicationController
 
   private
   def irgl_params
-    params.require(:irgl).permit(:name, :image, :text)
+    params.require(:irgl).permit(:image, :text).merge(user_id: current_user.id)
   end
 
-  def set_tweet
+  def set_irgl
     @irgl = Irgl.find(params[:id])
   end
   
+  def move_to_index
+    unless user_signed_in?
+      redirect_to action: :index
+    end
+  end
   
 end
 
