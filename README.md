@@ -22,3 +22,28 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+DB設計
+usersテーブル
+
+| Column             | Type                | Options                   |
+|--------------------|---------------------|---------------------------|
+| name               | string              | null: false               |
+| email              | string              | null: false, unique: true |
+| encrypted_password | string              | null: false               |
+
+has_many : irregulars
+
+
+
+irregularsテーブル
+
+| Column             | Type                | Options                   |
+|--------------------|---------------------|---------------------------|
+| users              | string              | null: false, foreign_key: true|
+| spot               | string              | null: false               |
+| ship_no            | string              | null: false               |
+| status             | string              | null: false               |
+| remarks            | string              | null: false               |
+
+belongs_to : users
