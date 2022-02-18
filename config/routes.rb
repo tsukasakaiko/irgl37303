@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :irgls, only: [:index, :new]
+  resources :irgls
   root to: 'irgls#index'
 
 end
