@@ -1,26 +1,9 @@
+<%= form_with(url: search_irgls_path, local: true, method: :get, class: "search-form") do |form| %>
+  <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+  <%= form.submit "検索", class: "search-btn" %>
+<% end %>
 <div class="contents row">
   <% @irgls.each do |irgl| %>
-    <div class="content_post" style="background-image: url(<%= irgl.image %>);">
-     <div class="more">
-        <span><%= image_tag 'arrow_top.png' %></span>
-        <ul class="more_list">
-         <li>
-            <%= link_to '詳細', irgl_path(irgl.id), method: :get %>
-          </li>
-         <li>
-            <%= link_to '編集', edit_irgl_path(irgl.id), method: :get %>
-          </li>
-          <li>
-            <%= link_to '削除', "/irgls/#{irgl.id}", method: :delete %>
-          </li>
-        </ul>
-      </div>
-      <p><%= irgl.text %></p>
-      <span class="name">
-      <a href="">
-          <span>投稿者</span><%= irgl.user.nickname %>
-        </a>
-      </span>
-    </div>
+<%= render partial: "irgl", locals: { irgl: irgl } %>
   <% end %>
 </div>
