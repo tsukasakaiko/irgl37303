@@ -1,8 +1,6 @@
 <div class="contents row">
   <p><%= @nickname %>さんの投稿一覧</p>
   <% @irgls.each do |irgl| %>
-    <div class="content_post" style="background-image: url(<%= irgl.image %>);">
-      <p><%= irgl.text %></p>
-    </div>
+ <%= render partial: "irgls/irgl", locals: { irgl: irgl } %>
   <% end %>
 </div>

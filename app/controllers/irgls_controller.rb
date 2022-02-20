@@ -1,9 +1,8 @@
 class IrglsController < ApplicationController
   before_action :set_irgl, only: [:edit, :show]
-  before_action :move_to_index, except: [:index, :show]
 
   def index
-    @irgls = Irgl.includes(:user)
+    @irgls = Irgl.includes(:user).order("created_at DESC")
   end
   
   def new
@@ -29,7 +28,8 @@ class IrglsController < ApplicationController
   end
 
   def show
- 
+    @comment = Comment.new
+    @comments = @irgl.comments.includes(:user)
   end
 
 

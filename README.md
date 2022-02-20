@@ -32,11 +32,11 @@ usersテーブル
 | email              | string              | null: false, unique: true |
 | encrypted_password | string              | null: false               |
 
-has_many : irregulars
+has_many : irgls
 
 
 
-irregularsテーブル
+irglsテーブル
 
 | Column             | Type                | Options                   |
 |--------------------|---------------------|---------------------------|
@@ -47,3 +47,15 @@ irregularsテーブル
 | remarks            | string              | null: false               |
 
 belongs_to : users
+
+commentsテーブル
+
+| Column             | Type                | Options                   |
+|--------------------|---------------------|---------------------------|
+| id                 | string              | null: false, foreign_key: true|
+| text               | string              | null: false               |
+| irgl_id            | string              | null: false               |
+| user_id            | string              | null: false               |
+
+belongs_to : users
+belongs_to : irgls
