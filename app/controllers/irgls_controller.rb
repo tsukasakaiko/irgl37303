@@ -1,5 +1,6 @@
 class IrglsController < ApplicationController
   before_action :set_irgl, only: [:edit, :show]
+  before_action :move_to_index, except: [:index, :show, :search]
 
   def index
     @irgls = Irgl.includes(:user).order("created_at DESC")
@@ -32,6 +33,9 @@ class IrglsController < ApplicationController
     @comments = @irgl.comments.includes(:user)
   end
 
+  def search
+    @irgls = Irgl.search(params[:keyword])
+  end
 
   private
   def irgl_params
