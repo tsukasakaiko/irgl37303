@@ -210,7 +210,7 @@ figure {
 /*
  * Define consistent border, margin, and padding. */
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #000080;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -638,7 +638,7 @@ ul li {
 body,
 html {
   height: 100%;
-  background-color: #f5f5f3;
+  background-color: #F8F8FF;
 }
 
 body {
@@ -655,18 +655,18 @@ body {
   line-height: 1.57;
   letter-spacing: 0.15em;
   font-size: 16px;
-  color: #666;
+  color: #C0C0C0;
   font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
   margin: 0;
 }
 
 a {
   text-decoration: none;
-  color: #666;
+  color: #C0C0C0;
 }
 
 a:hover {
-  color: #57C3E9;
+  color: #FFFFFF;
 }
 
 .bold {
@@ -675,7 +675,7 @@ a:hover {
 
 .serif,
 div.contents.row div.content_post p {
-  font-family: 'ほのか明朝', serif;
+  font-family: 'メイリオ', serif;
 }
 
 .ultra {
@@ -683,7 +683,7 @@ div.contents.row div.content_post p {
 }
 
 ::selection {
-  background: #D8D8D8;
+  background: #000080;
 }
 
 .transition,
@@ -707,18 +707,18 @@ form input[type="submit"] {
 header.header div.header__bar.row div.grid-6 a.post {
   padding: 8px 20px;
   font-size: 14px;
-  border: 2px solid #57C3E9;
-  color: #57C3E9;
+  border: 2px solid #000080;
+  color: #C0C0C0;
   font-weight: bold;
   text-align: center;
-  border-radius: 3px;
+ 
   display: inline-block;
 }
 
 .btn:hover,
 header.header div.header__bar.row div.grid-6 a.post:hover {
-  border-color: #9bdbf2;
-  color: #9bdbf2;
+  border-color: #000080;
+  color: #C0C0C0;
 }
 
 .title {
@@ -737,8 +737,8 @@ header.header div.header__bar.row div.grid-6 a.post:hover {
 
 header.header {
   padding: 10px;
-  border-bottom: 1px solid #D8D8D8;
-  background-color: #fff;
+  border-bottom: 1px solid #000080;
+  background-color: #000080;
   position: fixed;
   top: 0;
   left: 0;
@@ -797,7 +797,7 @@ header.header .user_nav span:after {
 }
 
 header.header .user_nav span:hover ul {
-  color: #57C3E9;
+  color: #C0C0C0;
   display: block;
 }
 
@@ -812,7 +812,7 @@ header.header .user_nav ul {
 }
 
 header.header .user_nav ul li {
-  background-color: #f0f0f0;
+  background-color: #000080;
 }
 
 header.header .user_nav ul li a {
@@ -866,7 +866,6 @@ div.contents.row div.content_post {
   color: #fff;
   background-size: cover;
   background-position: center center;
-  border-radius: 3px;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
 }
 
@@ -886,7 +885,6 @@ div.contents.row div.content_post:after {
   background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 0.85) 100%);
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 0.85) 100%);
   z-index: 1;
-  border-radius: 3px;
 }
 
 div.contents.row div.content_post .more {
@@ -914,7 +912,7 @@ div.contents.row div.content_post .more ul.more_list {
   border: 1px solid #ddd;
   display: none;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
+ 
 }
 
 div.contents.row div.content_post .more ul.more_list li {
@@ -931,8 +929,8 @@ div.contents.row div.content_post .more ul.more_list li a {
 }
 
 div.contents.row div.content_post .more ul.more_list li a:hover {
-  background-color: #57C3E9;
-  color: #fff;
+  background-color: #C0C0C0;
+  color: #C0C0C0;
 }
 
 div.contents.row div.content_post p {
@@ -962,7 +960,7 @@ div.contents.row div.content_post span.name a {
 
 div.contents.row div.content_post span.name a:hover {
   text-decoration: underline;
-  color: #aaa;
+  color: #C0C0C0;
 }
 
 div.contents.row div.content_post span.name span {
@@ -988,21 +986,21 @@ form textarea {
   width: 100%;
   margin: 5px 0 15px;
   padding: 10px;
-  border: 1px solid #D8D8D8;
-  border-radius: 5px;
+  border: 1px solid #808080;
+
   font-family: "游ゴシック", "YuGothic";
 }
 
 form input[type="submit"] {
-  background-color: #57C3E9;
-  border-radius: 20px;
-  color: #fff;
+  background-color: #000080;
+
+  color: #FFFFFF;
   border: 0;
   font-size: 18px;
 }
 
 form input[type="submit"]:hover {
-  background-color: #84d3ef;
+  background-color: #C0C0C0;
 }
 
 .container {
@@ -1018,7 +1016,7 @@ form input[type="submit"]:hover {
   text-align: center;
   font-weight: normal;
   font-size: 20px;
-  color: #666;
+  color: #000080;
 }
 
 .comments {
@@ -1027,7 +1025,7 @@ form input[type="submit"]:hover {
 }
 
 .comments a {
-  color: #57C3E9;
+  color: #000080;
 }
 
 .comments a:hover {
@@ -1037,7 +1035,7 @@ form input[type="submit"]:hover {
 footer {
   margin: 30px auto;
   padding: 10px;
-  color: #D8D8D8;
+  color: #000080;
 }
 
 footer p {
