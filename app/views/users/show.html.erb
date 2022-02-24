@@ -1,5 +1,5 @@
 <div class="contents row">
-  <p><%= @nickname %>さんの投稿一覧</p>
+  <p><%= @name %>さんの投稿一覧</p>
   <% @irgls.each do |irgl| %>
  <%= render partial: "irgls/irgl", locals: { irgl: irgl } %>
   <% end %>

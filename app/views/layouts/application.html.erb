@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Irgl37303</title>
+    <title>空港専用イレギュラー対応アプリ</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
   <header class="header">
       <div class="header__bar row">
-        <h1 class="grid-6"><a href="/">Irgl App</a></h1>
+        <h1 class="grid-6"><a href="/">Irregular Application</a></h1>
           <% if user_signed_in? %>
           <div class="user_nav grid-6">
-          <span><%= current_user.nickname %>
+          <span><%= current_user.name %>
             <ul class="user__info">
               <li>
                 <%= link_to "マイページ", "/users/#{current_user.id}" %>
@@ -33,7 +34,11 @@
         <% end %>
       </div>
     </header>
+    <img src="images/night.png">
+
     <%= yield %>
+
+
      <footer>
       <p>
         Copyright Irgl App 2022.

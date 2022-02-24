@@ -1,5 +1,6 @@
 <div class="contents row">
-  <div class="content_post" style="background-image: url(<%= @irgl.image %>);">
+  <%# <div class="content_post"> %>
+   
    <% if user_signed_in? && current_user.id == @irgl.user_id %>
     <div class="more">
       <span><%= image_tag 'arrow_top.png' %></span>
@@ -13,13 +14,15 @@
       </ul>
     </div>
      <% end %>
-    <p><%= @irgl.text %></p>
+     
+    <p><%= @irgl.spot %></p>
    <span class="name">
       <a href="/users/<%= @irgl.user.id %>">
-        <span>投稿者</span><%= @irgl.user.nickname %>
+        <span>投稿者</span><%= @irgl.user.name %>
       </a>
     </span>
   </div>
+
   <div class="container">
     <% if user_signed_in? %>
       <%= form_with(model: [@irgl, @comment], local: true) do |form| %>
@@ -34,7 +37,7 @@
       <h4>＜コメント一覧＞</h4>
       <% @comments.each do |comment| %>
         <p>
-          <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+          <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>:</strong>
           <%= comment.text %>
         </p>
       <% end %>

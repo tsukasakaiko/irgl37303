@@ -39,7 +39,7 @@ class IrglsController < ApplicationController
 
   private
   def irgl_params
-    params.require(:irgl).permit(:image, :text).merge(user_id: current_user.id)
+    params.require(:irgl).permit(:spot, :ship_no, :status, :remarks).merge(user_id: current_user.id)
   end
 
   def set_irgl

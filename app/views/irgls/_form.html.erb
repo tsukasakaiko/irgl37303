@@ -1,5 +1,7 @@
     <%= form_with(model: irgl, local: true) do |form| %>
-      <%= form.text_field :image, placeholder: "Image Url" %>
-      <%= form.text_area :text, placeholder: "text", rows: "10" %>
+    <%= form.text_area :spot, placeholder: "spot", rows: "10" %>
+    <%= form.text_area :ship_no, placeholder: "ship_no", rows: "10" %>
+    <%= form.text_area :status, placeholder: "status", rows: "10" %>
+    <%= form.text_area :remarks, placeholder: "remarks", rows: "10" %>
       <%= form.submit "イレギュラーの処理状況を投稿する" %>
     <% end %>

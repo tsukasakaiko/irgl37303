@@ -1,5 +1,8 @@
 class Irgl < ApplicationRecord
-  validates :text, presence: true
+  validates :spot, presence: true
+  validates :ship_no, presence: true
+  validates :status, presence: true
+  validates :remarks, presence: true
   belongs_to :user
   has_many :comments
 
