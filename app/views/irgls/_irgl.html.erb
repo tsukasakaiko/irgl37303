@@ -1,10 +1,10 @@
     <div class="content_post">
-     <div class="more">
-        <span><%= image_tag 'night.png' %></span>
+    
+        <div class="more">
+       <a>編集・削除する</a>
+       <br>※自分の投稿のみ可</br>
         <ul class="more_list">
-         <li>
-            <%= link_to '詳細', irgl_path(irgl.id), method: :get %>
-          </li>
+        
            <% if user_signed_in? && current_user.id == irgl.user_id %>
          <li>
             <%= link_to '編集', edit_irgl_path(irgl.id), method: :get %>
@@ -15,13 +15,14 @@
            <% end %>
         </ul>
       </div>
-      <p><%= irgl.spot %></p>
-      <p><%= irgl.ship_no %></p>
-      <p><%= irgl.status %></p>
-      <p><%= irgl.remarks %></p>
+      <br><%= irgl.spot %></br>
+      <br><%= irgl.ship_no %></br>
+      <br><%= irgl.status %></br>
+      <br><%= irgl.remarks %></br>
       <span class="name">
       <a href="">
           <span>投稿者</span><%= irgl.user.name %>
+      
         </a>
       </span>
     </div>
