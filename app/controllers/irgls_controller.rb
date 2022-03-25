@@ -3,9 +3,9 @@ class IrglsController < ApplicationController
   before_action :move_to_index, except: [:index, :show, :search]
 
   def index
-    @irgls = Irgl.includes(:user).order("created_at DESC")
+    @irgls = Irgl.includes(:user).order('created_at DESC')
   end
-  
+
   def new
     @irgl = Irgl.new
   end
@@ -20,7 +20,6 @@ class IrglsController < ApplicationController
   end
 
   def edit
-  
   end
 
   def update
@@ -38,6 +37,7 @@ class IrglsController < ApplicationController
   end
 
   private
+
   def irgl_params
     params.require(:irgl).permit(:spot, :ship_no, :status, :remarks).merge(user_id: current_user.id)
   end
@@ -45,12 +45,8 @@ class IrglsController < ApplicationController
   def set_irgl
     @irgl = Irgl.find(params[:id])
   end
-  
-  def move_to_index
-    unless user_signed_in?
-      redirect_to action: :index
-    end
-  end
-  
-end
 
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
+  end
+end

@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-has_many :irgls
-has_many :comments 
+  has_many :irgls
+  has_many :comments
 end

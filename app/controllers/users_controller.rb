@@ -5,4 +5,3 @@ class UsersController < ApplicationController
     @irgls = user.irgls
   end
 end
-

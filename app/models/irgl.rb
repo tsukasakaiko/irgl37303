@@ -7,7 +7,7 @@ class Irgl < ApplicationRecord
   has_many :comments
 
   def self.search(search)
-    if search != ""
+    if search != ''
       Irgl.where('text LIKE(?)', "%#{search}%")
     else
       Irgl.all
