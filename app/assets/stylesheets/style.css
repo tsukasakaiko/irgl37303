@@ -151,12 +151,6 @@ pre {
 }
 
 /*
- * Set consistent quote types. */
-q {
-  quotes: "“""”""‘""’";
-}
-
-/*
  * Address inconsistent and variable font size in all browsers. */
 small {
   font-size: 80%;
