@@ -12,16 +12,15 @@
             <%= link_to '削除', "/irgls/#{irgl.id}", method: :delete %>
           </li>
            <% end %>
-        
       </div>
+
       <br><%= irgl.spot %></br>
       <br><%= irgl.ship_no %></br>
       <br><%= irgl.status %></br>
       <br><%= irgl.remarks %></br>
       <span class="name">
       <a href="">
-          <span>投稿者</span><%= irgl.user.name %>
-      
+      <span>投稿者</span><%= irgl.user.name %>
         </a>
       </span>
     </div>
